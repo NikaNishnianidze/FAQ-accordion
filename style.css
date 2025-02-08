@@ -23,6 +23,10 @@ body {
   display: none;
 }
 
+.left-side {
+  display: none;
+}
+
 .container {
   width: 327px;
   border-radius: 23px;
@@ -39,6 +43,7 @@ h1 {
 .pictures {
   position: relative;
   top: 75px;
+  left: 45px;
 }
 
 .pictures img {
@@ -51,6 +56,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 18px;
+  margin-top: 38px;
 }
 
 .divider {
@@ -76,4 +82,63 @@ h1 {
   font-weight: 400;
   line-height: 18px;
   color: rgba(120, 120, 135, 1);
+}
+
+.active .answer {
+  display: block;
+}
+
+.active h2 {
+  font-weight: bold;
+}
+
+.active #arrow {
+  transform: rotate(180deg);
+}
+
+@media screen and (min-width: 1440px) {
+  .pictures {
+    display: none;
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 1) url(./assets/bg-pattern-desktop.svg)
+      no-repeat -164px -25px;
+    background-size: 630px 600px;
+    width: 920px;
+  }
+
+  .sides {
+    display: flex;
+    gap: 27px;
+  }
+
+  .question-div {
+    display: flex;
+    gap: 72px;
+  }
+
+  .left-side {
+    display: block;
+    position: relative;
+    left: -105px;
+    top: 0px;
+  }
+
+  .left-side img {
+    width: 472px;
+    height: 359px;
+  }
+
+  p {
+    max-width: 250px;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
 }
